@@ -48,3 +48,20 @@ print("""\
 3333
 4444\
 """)
+
+# 変数に代入した文字列にはrubyの配列のようなインデックスが振られている　※最初から、や、最後まで、は省略可
+word = 'python'
+print(word[0])
+print(word[1])
+print(word[-1])
+print(word[0:2])
+print(word[:2])
+print(word[2:])
+
+# 1文字目を'j'に変更して代入する場合
+word = 'j' + word[1:]
+print(word[:])
+
+# 長さ(文字数)を数える
+n = len(word)
+print(n)
