@@ -49,6 +49,9 @@ print("""\
 4444\
 """)
 
+
+# 12.文字列のインデックスとスライス
+
 # 変数に代入した文字列にはrubyの配列のようなインデックスが振られている　※最初から、や、最後まで、は省略可
 word = 'python'
 print(word[0])
@@ -65,3 +68,18 @@ print(word[:])
 # 長さ(文字数)を数える
 n = len(word)
 print(n)
+
+
+# 13.文字のメソッド
+
+s = 'My name in Mike. Hi Mike.'
+print(s)
+
+# 文字列は'My'で始まっているか？　を判定するメソッド
+is_start = s.startswith('My')
+print(is_start)
+
+print(s.find('Mike'))
+
+
+# 14.文字の代入
