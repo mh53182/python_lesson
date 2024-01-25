@@ -21,6 +21,58 @@ print(x[0][1])
 
 print('########################')
 
+# 17. リストの操作
+
+s = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+s[0] = 'X'
+print(s)
+
+s[2:5] = ['C', 'D', 'E']
+print(s)
+
+s[3:6] = []
+print(s)
+
+s[:] = []
+print(s)
+
+
+s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+s.append(100)
+print(s)
+
+s.insert(0, 200)
+print(s)
+
+s.pop(2)
+print(s[0:4])
+
+del s[2]
+print(s)
+
+s.remove(9)
+print(s)
+
+t = [1, 2, 3, 4, 5]
+u = [6, 7, 8, 9, 10]
+v = t + u
+print(v)
+print(t)
+print(u)
+
+t += u
+print(t)
+print(u)
+
+u.extend(t)
+print(t)
+print(u)
+
+print('########################')
+
+
 
 # 18.リストのメソッド
 
