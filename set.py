@@ -44,3 +44,23 @@ print(s)
 # 空にもできる
 s.clear()
 print(s)
+
+print('##############################')
+
+
+# 30.集合の使いどころ
+
+# 共通の友人は？
+my_friands = {'A', 'B', 'C'}
+A_friends = {'C', 'D', 'E'}
+print(my_friands & A_friends)
+
+# 買った果物の種類は？
+# アプリケーションでユーザーが購入したものを保存するにはリストを使う
+bought = ['apple', 'banana', 'apple', 'banana']
+# これだと買ったものが全部でちゃう。
+print(bought)
+
+# 買った種類を表示するためリストを集合に変換＝重複しなくなる
+kind = set(bought)
+print(kind)
