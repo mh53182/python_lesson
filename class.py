@@ -10,3 +10,18 @@ class Person(object):
 # ここで呼び出されたものがオブジェクト(実際にメモリを消費する)
 person = Person()
 person.say_something()
+
+
+print('######################')
+
+# 79. クラスの初期化とクラス変数
+
+class Person2(object):
+    def __init__(self, name):
+        self.myname = name
+
+    def say_something(self):
+        print('I am {}. Hello'.format(self.myname))
+
+person = Person2('Mike')
+person.say_something()
