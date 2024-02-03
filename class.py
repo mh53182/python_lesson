@@ -25,3 +25,14 @@ class Person2(object):
 
 person = Person2('Mike')
 person.say_something()
+
+print('#################################')
+
+v = 1
+w = 2
+v, w = w + 1, v + 3
+print(v, w)
+x = w ** 2 + 1
+y = x - 8 / 2
+z = y % 5
+print(w, y, z)
