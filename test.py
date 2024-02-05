@@ -9,7 +9,14 @@ fruits = ['apple', 'kiwi', 'plum']
 for f in fruits[:]:
     if len(f) < 5:
         fruits.insert(0, f)
+        print(fruits)
         fruits.pop()
         print(fruits)
 
 print(fruits, end = ' ')
+
+print('#####################')
+
+pairs = [(3, 'b'),(1, 'c'),(2, 'a')]
+pairs.sort(key = lambda arg : arg[1])
+print(pairs)
