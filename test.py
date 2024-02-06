@@ -20,3 +20,73 @@ print('#####################')
 pairs = [(3, 'b'),(1, 'c'),(2, 'a')]
 pairs.sort(key = lambda arg : arg[1])
 print(pairs)
+
+print('#####################')
+
+combs = []
+for x in [3,2,1]:
+    for y in [6,5]:
+        if x != y:
+            combs.append((x, y))
+print(combs)
+
+combs2 = [(a,b) for a in [3, 2, 1] for b in [6,5] if a != b]
+print(combs2)
+
+print('###################')
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+power = [tuple(row[i] for row in matrix) for i in range(3)]
+print(power)
+
+power2 = list(zip(*matrix))
+print(power2)
+
+print('#################')
+
+class kusanagi(Exception):
+    pass
+
+def raise_character(a):
+    print("【A】")
+    raise kusanagi
+    print("【B】")
+
+def func(name: int):
+    try:
+        print(name, "【C】")
+        raise_character(name)
+    except kusanagi:
+        print("【D】")
+        raise Exception
+
+name = "Magatama"
+try:
+    func(name)
+except Exception:
+    print("【E】")
+
+print('############################')
+
+loc = "1"
+def scope():
+    loc = "2"
+    def do_local():
+        loc = "3"
+    def do_nonlocal():
+        nonlocal loc
+        loc = "4"
+    def do_global():
+        global loc
+        loc = "5"
+
+    do_local()
+    print("【A】", loc)
+    do_nonlocal()
+    print("【B】", loc)
+    do_global()
+    print("【C】", loc)
+
+print("【D】", loc)
+scope()
+print("【E】", loc)
