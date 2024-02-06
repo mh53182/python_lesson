@@ -92,3 +92,25 @@ scope()
 print("【E】", loc)
 
 print('#####################')
+
+# [ 実行結果 ]
+# Need Speed?
+# I'm Saya.
+# Need Speed?
+# I'm David.
+
+class kusanagi():
+    def s(self):
+        print("Need Speed?")
+        self.m()
+    def m(self): 
+        print("I'm Saya.")
+
+class wexal(kusanagi):
+        def m(self):
+            print("I'm David.")
+
+k = kusanagi()
+w = wexal()
+k.s()
+w.s()
