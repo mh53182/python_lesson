@@ -90,3 +90,5 @@ def scope():
 print("【D】", loc)
 scope()
 print("【E】", loc)
+
+print('#####################')
