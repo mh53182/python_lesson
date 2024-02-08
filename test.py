@@ -99,18 +99,26 @@ print('#####################')
 # Need Speed?
 # I'm David.
 
-class kusanagi():
+class izanami():
     def s(self):
         print("Need Speed?")
         self.m()
     def m(self): 
         print("I'm Saya.")
 
-class wexal(kusanagi):
+class wexal(izanami):
         def m(self):
             print("I'm David.")
 
-k = kusanagi()
+k = izanami()
 w = wexal()
 k.s()
 w.s()
+
+# １．"k.s()"から始まり、"izanami"クラスの実体としてメソッド"s"を呼び出す
+# ２．メソッド"s"の中で"Need Speed?"が出力される
+# ３．"self.m()"で同じクラス内のメソッド"m"の処理に移り、"I'm Saya."が出力される
+# ４．"w.s()"の行で"wexal"クラスの実体としてメソッド"s"を呼び出す（"izanami"クラスを継承した"wexal"クラスがメソッド"s"を実行）
+# ５．メソッド"s"の中で"Need Speed?"が出力される
+# ６．"self.m()"で同じクラス内のメソッド"m"の処理に移るが、このメソッドはオーバーライドされているので"wexal"クラス内の関数"m"を参照する
+# ７．"I'm David."が出力される
