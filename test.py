@@ -135,3 +135,26 @@ n = 2 ** 1 ** 3
 print(n)
 
 print('#######################')
+
+# [ 実行結果 ]
+# 2 is a prime number
+# 3 is a prime number
+# 4 equals 2 * 2
+# 5 is a prime number
+# 6 equals 2 * 3
+# 7 is a prime number
+# 8 equals 2 * 4
+# 9 equals 3 * 3
+
+for n in range(2, 10):
+    print('top', n)
+    for x in range(2 ,n):
+        print('n=', n)
+        print('x=', x)
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            print('N=', n)
+            print('X=', x)
+            break
+    else:
+        print(n,'is a prime number')
