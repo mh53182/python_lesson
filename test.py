@@ -155,6 +155,57 @@ for n in range(2, 10):
             print(n, 'equals', x, '*', n//x)
             print('N=', n)
             print('X=', x)
+            # この行がcontinueだとnを割り切れる数字が全て"n equals ~"で出力されたうえ、最終的にすべて素数扱いになる
             break
     else:
         print(n,'is a prime number')
+
+
+
+print('#############################')
+
+def shop(name,*argsY, **argsX):
+    print("flowershop:", name)
+    keys = sorted(argsX.keys())
+    for kw in keys:
+        print(kw, ":", argsX[kw])
+    for Y in argsY:
+        print(Y)
+
+# shopの引数nameにIrisが入る
+# *argsで位置引数をタプルに入れる
+# **kwargsでキーワード引数を辞書に入れる
+shop("Iris","Open: 9:30 am","Close: 10:30 pm","Monday and holidays are closed.",bouquet="Sunflower",plants="Pachira",dried="Rose")
+
+print('#################################')
+
+def scope():
+    loc = "init"
+    print('in scope :', loc)
+    def do_local():
+        loc = "local"
+        # do_local関数内でのみlocalとして定義される
+        # 外からdo_localを呼び出した後でlocを表示してもinit
+        print('in do_local :', loc)
+    def do_nonlocal():
+        nonlocal loc
+        loc = "nonlocal"
+        # 親関数の変数locを書き換える
+        # do_nonlocal呼び出しによってscope関数の変数locがnonlocalに書き換えられる
+        print('in nonlocal :', loc)
+    def do_global():
+        global loc
+        loc = "global"
+        # global変数locを新たに作成（initと定義されていたのはあくまでscope関数内の変数）
+        # print("C:", loc)はscope関数内で呼び出されているのでnonlocalのまま
+        print('in global :', loc)
+
+    do_local()
+    print("A:", loc)
+    do_nonlocal()
+    print("B:", loc)
+    do_global()
+    print("C:", loc)
+
+scope()
+print("D:", loc)
