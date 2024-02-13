@@ -209,3 +209,38 @@ def scope():
 
 scope()
 print("D:", loc)
+
+
+print('####################')
+
+colors = ['red', 'green', 'blue']
+# リストの末尾にyerrowを追加
+colors.append('yellow')
+# リストの0番目にpurpleを追加
+colors.insert(0,'purple')
+# リストのインデックス2(3番目)から最後まで繰り返す
+for color in colors[2:]:
+    # 要素、文字の長さ、カンマ区切り
+    print(color, len(color), end = ', ')
+
+print('###')
+
+for i in range(len(colors)):
+    print(i, colors[i])
+
+for i, v in enumerate(colors):
+    print(i, v)
+
+print('#############')
+
+# 求める実行結果
+# deque(['cow', 'dog', 'elephant', 'fox'])
+
+from collections import deque
+queue = deque(["bear", "cow", "dog", "elephant","fox"])
+queue.append("goat")
+print(queue)
+queue.popleft()
+print(queue)
+queue.pop()
+print(queue)
