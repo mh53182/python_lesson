@@ -41,19 +41,22 @@ print(s)
 s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 s.append(100)
-print(s)
+print('append:', s)
 
 s.insert(0, 200)
-print(s)
+print('insert:', s)
 
+# '2'そのものを取り出す
 s.pop(2)
-print(s[0:4])
+print('pop:', s)
 
+# インデックス2番を削除
 del s[2]
-print(s)
+print('del:', s)
 
+# '9'を削除
 s.remove(9)
-print(s)
+print('remove:', s)
 
 t = [1, 2, 3, 4, 5]
 u = [6, 7, 8, 9, 10]
